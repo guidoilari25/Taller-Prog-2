@@ -1,0 +1,12 @@
+package Personas;
+
+public enum Rol {
+    AYUDANTE_CAMPO,
+    PREPARADOR_FISICO,
+    MEDICO,
+    KINESIOLOGO,
+    ENTRENADOR_ARQUEROS,
+    ANALISTA_VIDEOS,
+    NUTRICIONISTA,
+    PSICOLOGO
+}
