@@ -2,13 +2,13 @@ package Partido;
 
 public class Evento {
     private TipoEvento tipo;
-    private int minuto;
+    private float minuto;
 
     public Evento() {
         this.tipo = null;
         this.minuto = 0;
     }
-    public Evento(TipoEvento tipo, int minuto) {
+    public Evento(TipoEvento tipo, float minuto) {
         this.tipo = tipo;
         this.minuto = minuto;
     }
@@ -19,10 +19,10 @@ public class Evento {
     public void setTipo(TipoEvento tipo) {
         this.tipo = tipo;
     }
-    public int getMinuto() {
+    public float getMinuto() {
         return minuto;
     }
-    public void setMinuto(int minuto) {
+    public void setMinuto(float minuto) {
         this.minuto = minuto;
     }
 }
