@@ -1,7 +1,7 @@
 package Torneo;
 
 public class Fase {
-    private NombreFase nombre;
+    private NombreFase fase;
 
     public Fase() {
         this.fase = null;
@@ -11,7 +11,7 @@ public class Fase {
     }
     
     public NombreFase getNombre() {
-        return nombre;
+        return fase;
     }
     public void setNombre(NombreFase fase) {
         this.fase = fase;
