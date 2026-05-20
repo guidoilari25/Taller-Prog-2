@@ -24,6 +24,5 @@ public class Estadio {
     }
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
-    }
-    
+    }   
 }
