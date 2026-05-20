@@ -16,5 +16,4 @@ public class Fase {
     public void setNombre(NombreFase fase) {
         this.fase = fase;
     }
-
 }
