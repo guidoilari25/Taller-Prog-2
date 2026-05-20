@@ -31,7 +31,7 @@ public class Partido {
     public Time getHorario() {
         return horario;
     }
-    public void setHoarario(Time horario) {
+    public void setHorario(Time horario) {
         this.horario = horario;
     }
     public float getDuracion() {
