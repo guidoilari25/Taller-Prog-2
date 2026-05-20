@@ -16,8 +16,14 @@ public class Estadio {
     public String getNombre() {
         return nombre;
     }
+    public void setNombre(int nombre) {
+        this.nombre = nombre;
+    }
     public int getCapacidad() {
         return capacidad;
+    }
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
     
 }
