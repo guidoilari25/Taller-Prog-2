@@ -5,8 +5,7 @@ public class Grupo {
     private String descripcion;
 
     public Grupo() {
-        this.identificacion = "";
-        this.descripcion = "";
+        this("", "");
     }
     public Grupo(String identificacion, String descripcion) {
         this.identificacion = identificacion;
