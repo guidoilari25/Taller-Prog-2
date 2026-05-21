@@ -5,8 +5,7 @@ public class Estadio {
     private int capacidad;
 
     public Estadio() {
-        this.nombre = "";
-        this.capacidad = 0;
+        this("", 0);
     }
     public Estadio(String nombre, int capacidad) [
         this.nombre = nombre;
