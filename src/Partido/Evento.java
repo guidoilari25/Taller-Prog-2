@@ -5,8 +5,7 @@ public class Evento {
     private float minuto;
 
     public Evento() {
-        this.tipo = null;
-        this.minuto = 0;
+        this(null, 0);
     }
     public Evento(TipoEvento tipo, float minuto) {
         this.tipo = tipo;
