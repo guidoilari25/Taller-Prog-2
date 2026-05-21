@@ -10,10 +10,7 @@ public class Partido {
     private float tiempoAdicional;
 
     public Partido() {
-        this.fecha = null;
-        this.horario = null;
-        this.duracion = 0;
-        this.tiempoAdicional = 0;
+        this(null, null, 0, 0);
     }
     public Partido(Date fecha, Time horario, float duracion, float tiempoAdicional) {
         this.fecha = fecha;
