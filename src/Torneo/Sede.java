@@ -25,7 +25,7 @@ public class Sede {
     public float getAlturaNivelMar() {
         return alturaNivelMar;
     }
-    public void setAlturaNivelMar(String alturaNivelMar) {
+    public void setAlturaNivelMar(float alturaNivelMar) {
         this.alturaNivelMar = alturaNivelMar;
     }
     public String getClima() {

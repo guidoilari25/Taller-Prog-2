@@ -12,7 +12,7 @@ public class Grupo {
         this.descripcion = descripcion;
     }
 
-    public String getIndentificacion() {
+    public String getIdentificacion() {
         return identificacion;
     }
     public void setIdentificacion(String identificacion) {
@@ -26,6 +26,6 @@ public class Grupo {
     }
     
     public int obtenerPuntos(Seleccion s) {
-        
+
     }
 }
