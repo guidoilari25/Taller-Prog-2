@@ -1,4 +1,4 @@
-package Personas;
+package modelos.personas;
 
 public enum Posicion {
     ARQUERO,

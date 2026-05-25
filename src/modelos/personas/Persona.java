@@ -1,4 +1,4 @@
-package Personas;
+package modelos.personas;
 
 public class Persona {
     private String nombre;

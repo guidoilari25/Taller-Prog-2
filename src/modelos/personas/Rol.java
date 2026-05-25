@@ -1,4 +1,4 @@
-package Personas;
+package modelos.personas;
 
 public enum Rol {
     AYUDANTE_CAMPO,

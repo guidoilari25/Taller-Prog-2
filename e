@@ -8,7 +8,7 @@ Date:   Fri May 22 19:54:06 2026 -0300
 Author: LucioJ-R <luciojr2991@gmail.com>
 Date:   Thu May 21 20:28:38 2026 -0300
 
-    Update Partido.java
+    Update modelos.partido.java
 
 [33mcommit af867b197b07a8f7b153823458b2700656327215[m
 Author: LucioJ-R <luciojr2991@gmail.com>
@@ -74,7 +74,7 @@ Date:   Wed May 20 15:49:02 2026 -0300
 Author: LucioJ-R <luciojr2991@gmail.com>
 Date:   Wed May 20 15:46:07 2026 -0300
 
-    Update Partido.java
+    Update modelos.partido.java
 
 [33mcommit f99ac7c1cf9d410c41e5df8bc718e520eab89faf[m
 Author: LucioJ-R <luciojr2991@gmail.com>
@@ -92,7 +92,7 @@ Date:   Wed May 20 15:37:58 2026 -0300
 Author: LucioJ-R <luciojr2991@gmail.com>
 Date:   Wed May 20 15:25:01 2026 -0300
 
-    Update Partido.java
+    Update modelos.partido.java
 
 [33mcommit 7c5aa66278817285a1c74f57f9977cfca4448cad[m
 Author: LucioJ-R <luciojr2991@gmail.com>

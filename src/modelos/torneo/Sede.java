@@ -1,4 +1,4 @@
-package Torneo;
+package modelos.torneo;
 
 public class Sede {
     private String ciudad;

@@ -1,4 +1,4 @@
-package Partido;
+package modelos.partido;
 
 public class Estadio {
     private String nombre;

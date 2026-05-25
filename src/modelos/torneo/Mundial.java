@@ -1,4 +1,4 @@
-package Torneo;
+package modelos.torneo;
 
 public class Mundial {
     private int anno;
@@ -7,7 +7,7 @@ public class Mundial {
     private int fechaHasta;
 
     public Mundial() {
-        this(0, "", "", "");
+        this(0, "", 0, 0);
     }
     public Mundial(int anno, String mascota, int fechaDesde, int fechaHasta) {
         this.anno = anno;

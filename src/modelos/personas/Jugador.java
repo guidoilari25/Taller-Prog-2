@@ -1,18 +1,29 @@
-package Personas;
+package modelos.personas;
+import modelos.partido.Evento;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Jugador extends Persona {
     private int dorsal;
     private Posicion posicion;
     private float peso;
     private float altura;
+    private List<Evento> eventos;
+
+    public Jugador(){
+        this("", 0, 0, 0, 0, null);
+        this.eventos = new ArrayList<Evento>();
+
+    }
 
     public Jugador(String nombre, int fechaNac, int dorsal, float peso, float altura, Posicion posicion) {
-        super(nombre, fechaNac); /*Correspondiente a la clase padre*/
+        super(nombre, fechaNac); // Correspondiente a la clase padre
         this.dorsal = dorsal;
         this.peso = peso;
         this.altura = altura;
         this.posicion = posicion;
-
+        this.eventos = new ArrayList<Evento>();
     }
 
     public int getDorsal() {

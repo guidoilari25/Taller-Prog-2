@@ -1,4 +1,4 @@
-package Torneo;
+package modelos.torneo;
 
 public class Grupo {
     private String identificacion;
@@ -25,7 +25,7 @@ public class Grupo {
         this.descripcion = descripcion;
     }
     
-    public int obtenerPuntos(Seleccion s) {
+    /*public int obtenerPuntos(Seleccion s) {
 
-    }
+    }*/
 }

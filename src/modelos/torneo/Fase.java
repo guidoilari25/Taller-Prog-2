@@ -1,4 +1,4 @@
-package Torneo;
+package modelos.torneo;
 
 public class Fase {
     private NombreFase fase;

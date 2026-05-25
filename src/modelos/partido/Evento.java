@@ -1,15 +1,19 @@
-package Partido;
+package modelos.partido;
+import modelos.personas.*;
 
 public class Evento {
     private TipoEvento tipo;
     private float minuto;
+    private Jugador jugador;
 
     public Evento() {
-        this(null, 0);
+        this(null, 0, null);
     }
-    public Evento(TipoEvento tipo, float minuto) {
+
+    public Evento(TipoEvento tipo, float minuto, Jugador jugador) {
         this.tipo = tipo;
         this.minuto = minuto;
+        this.jugador = jugador;
     }
     
     public TipoEvento getTipo() {

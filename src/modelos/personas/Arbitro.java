@@ -1,4 +1,4 @@
-package Personas;
+package modelos.personas;
 
 public class Arbitro extends Persona{
     private int aniosExp;

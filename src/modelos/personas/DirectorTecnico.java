@@ -1,4 +1,4 @@
-package Personas;
+package modelos.personas;
 
 public class DirectorTecnico extends Persona {
 
