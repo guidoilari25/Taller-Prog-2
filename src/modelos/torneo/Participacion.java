@@ -37,7 +37,7 @@ public class Participacion {
     public int cantidadTarjAmarillas() {
         
     }
-    public int cantidadRojas() {
+    public int cantidadTarjRojas() {
         
     }
 }
