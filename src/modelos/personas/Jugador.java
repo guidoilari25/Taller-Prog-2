@@ -26,43 +26,25 @@ public class Jugador extends Persona {
         this.eventos = new ArrayList<Evento>();
     }
 
-    public int getDorsal() {
+    public int getDorsal() { return dorsal; }
+    public void setDorsal(int dorsal) { this.dorsal = dorsal; }
 
-        return dorsal;
+    public Posicion getPosicion() { return posicion; }
+    public void setPosicion(Posicion posicion) { this.posicion = posicion; }
+
+    public float getPeso() { return peso; }
+    public void setPeso(float peso) { this.peso = peso; }
+
+    public float getAltura() { return altura; }
+    public void setAltura(float altura) { this.altura = altura; }
+
+    public void setEventos(List<Evento> eventos){
+        this.eventos = eventos;
     }
-
-    public void setDorsal(int dorsal) {
-
-        this.dorsal = dorsal;
+    public void agregarEvento(Evento evento){
+        this.eventos.add(evento);
     }
-
-    public Posicion getPosicion() {
-
-        return posicion;
-    }
-
-    public void setPosicion(Posicion posicion) {
-
-        this.posicion = posicion;
-    }
-
-    public float getPeso() {
-
-        return peso;
-    }
-
-    public void setPeso(float peso) {
-
-        this.peso = peso;
-    }
-
-    public float getAltura() {
-
-        return altura;
-    }
-
-    public void setAltura(float altura) {
-
-        this.altura = altura;
+    public List<Evento> getEventos(){
+        return eventos;
     }
 }

@@ -1,3 +1,6 @@
+package modelos.torneo;
+import modelos.partido.*;
+
 public class Participacion {
     private boolean esLocal;
     private Seleccion seleccion;
@@ -18,12 +21,14 @@ public class Participacion {
     public void setEsLocal(boolean esLocal) {
         this.esLocal = esLocal;
     }
+
     public Seleccion getSeleccion() {
         return seleccion;
     }
     public void setSeleccion(Seleccion seleccion) {
         this.seleccion = seleccion;
     }
+
     public Partido gePartido() {
         return partido;
     }
@@ -31,13 +36,14 @@ public class Participacion {
         this.partido = partido;
     }
 
-    public int cantidadGoles() {
-
+   /*ublic int cantidadGoles() {
     }
-    public int cantidadTarjAmarillas() {
+
+    Public int cantidadTarjAmarillas() {
         
     }
+
     public int cantidadTarjRojas() {
         
-    }
+    }*/
 }

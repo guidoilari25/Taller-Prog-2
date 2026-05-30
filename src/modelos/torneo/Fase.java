@@ -1,19 +1,52 @@
 package modelos.torneo;
 
+import modelos.partido.Partido;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Fase {
     private NombreFase fase;
 
+    //asociaciones
+    private List<Grupo> grupos;
+    private List<Partido> partidos;
+
+    //constructores
+
     public Fase() {
         this.fase = null;
+        this.grupos = new ArrayList<Grupo>();
+        this.partidos = new ArrayList<Partido>();
     }
-    public Fase(NombreFase fase) {
+
+    public Fase(NombreFase fase){
         this.fase = fase;
+        this.grupos = new ArrayList<Grupo>();
+        this.partidos = new ArrayList<Partido>();
     }
-    
-    public NombreFase getNombre() {
+
+    //setters, getters
+    public NombreFase getNombreFase() {
         return fase;
     }
-    public void setNombre(NombreFase fase) {
+    public void setNombreFase(NombreFase fase) {
         this.fase = fase;
     }
+
+    public List<Grupo> getGrupos(){ return this.grupos; }
+    public void setGrupo(List<Grupo> grupos){ this.grupos = grupos; }
+    public void agregarGrupo(Grupo grupo){
+        this.grupos.add(grupo);
+    }
+
+    public List<Partido> getPartidos(){ return this.partidos; }
+    public void setPartidos(List<Partido> partidos){
+        this.partidos = partidos;
+    }
+    public void agregarPartido(Partido partido){
+        this.partidos.add(partido);
+    }
+
+
 }

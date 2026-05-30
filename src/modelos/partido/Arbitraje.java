@@ -1,3 +1,6 @@
+package modelos.partido;
+import modelos.personas.*;
+
 public class Arbitraje {
     private Rol categoriaArbitro;
     private Arbitro arbitro;
@@ -6,6 +9,7 @@ public class Arbitraje {
     public Arbitraje() {
         this(null, null, null);
     }
+
     public Arbitraje(Rol categoriaArbitro, Arbitro arbitro, Partido partido) {
         this.categoriaArbitro = categoriaArbitro;
         this.arbitro = arbitro;
