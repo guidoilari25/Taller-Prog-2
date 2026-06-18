@@ -9,6 +9,7 @@ public class Participacion {
     public Participacion() {
         this(false, null, null);
     }
+
     public Participacion(boolean esLocal, Seleccion seleccion, Partido partido) {
         this.esLocal = esLocal;
         this.seleccion = seleccion;
@@ -36,14 +37,34 @@ public class Participacion {
         this.partido = partido;
     }
 
-   /*ublic int cantidadGoles() {
+
+   public int cantidadGoles() {
+       int goles = 0;
+       for(Evento evento:this.partido.getEventos()){
+           if(evento.getTipo().equals(TipoEvento.GOL)){
+               goles++;
+           }
+       }
+       return goles;
     }
 
-    Public int cantidadTarjAmarillas() {
-        
+    public int cantidadTarjetasAmarillas() {
+        int amarillas = 0;
+        for(Evento evento:this.partido.getEventos()){
+            if(evento.getTipo().equals(TipoEvento.TARJETA_AMARILLA)){
+                amarillas++;
+            }
+        }
+        return amarillas;
     }
 
-    public int cantidadTarjRojas() {
-        
-    }*/
+    public int cantidadTarjetasRojas() {
+        int rojas = 0;
+        for(Evento evento:this.partido.getEventos()){
+            if(evento.getTipo().equals(TipoEvento.TARJETA_ROJA)){
+                rojas++;
+            }
+        }
+        return rojas;
+    }
 }

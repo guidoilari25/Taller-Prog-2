@@ -77,6 +77,7 @@ public class Partido {
     public void setFase(Fase fase){
         this.fase = fase;
     }
+
     public void agregarEvento(TipoEvento tipoEvento, float minuto, Jugador j){
         this.eventos.add(new Evento(tipoEvento, minuto, j));
     }

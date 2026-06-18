@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.sistemamundial"},{"l":"com.sistemamundial.funcionalidades"},{"l":"com.sistemamundial.modelos.partido"},{"l":"com.sistemamundial.modelos.personas"},{"l":"com.sistemamundial.modelos.torneo"}];updateSearchResults();

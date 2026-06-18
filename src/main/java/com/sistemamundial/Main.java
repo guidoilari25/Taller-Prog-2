@@ -1,9 +1,11 @@
 package com.sistemamundial;
 
-import com.sistemamundial.vista.Menu;
+
+import com.sistemamundial.funcionalidades.*;
 public class Main{
     public static void main(String[] args){
-        Menu m = new Menu();
-        m.menuPrincipal();
+        SistemaMundial sistemaMundial = new SistemaMundial();
+        sistemaMundial.configInicial();
+        sistemaMundial.menuPrincipal();
     }
 }
