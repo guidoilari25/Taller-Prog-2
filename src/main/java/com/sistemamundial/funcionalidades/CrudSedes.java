@@ -3,18 +3,17 @@ package com.sistemamundial.funcionalidades;
 import com.sistemamundial.modelos.torneo.*;
 import com.sistemamundial.modelos.personas.*;
 import com.sistemamundial.modelos.partido.*;
-
+import com.sistemamundial.utilidades.Control;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class CrudSedes {
     private List<Sede> sedes;
-    private Scanner sc;
+    Control control;
 
     public CrudSedes(){
         sedes = new ArrayList<>();
-        sc = new Scanner(System.in);
+        control = new Control();
     }
 
     /**
@@ -30,58 +29,24 @@ public class CrudSedes {
      * por nombre (ignorando mayúsculas/minúsculas) el país anfitrión.
      */
     public void crearSede(ArrayList<Pais> paises){
-        //variables auxiliares
-        String nombrePais;
-        Pais pais = null;
-        boolean flag = false;
-        //atributos
-        String ciudad;
-        float alturaNivelMar;
-        String clima;
-        String zonaHoraria;
-
         System.out.println("-- Creacion de sede --");
-        while(!flag){
-            System.out.println("Por favor, ingrese el nombre del pais de la sede a crear (0 para cancelar): ");
-            nombrePais = sc.nextLine();
-            if(nombrePais.equals("0")){
-                System.out.println("Creacion cancelada. No se realizaron modificaciones.");
-                return;
-            }
-            for(int i = 0; i < paises.size(); i++){
-                if(paises.get(i).getNombre().equals(nombrePais)){
-                  pais = paises.get(i);
-                  flag = true;
-                  break;
-                }
-            }
-            if (!flag) {
-                System.out.println("Pais no encontrado, vuelva a intentarlo.");
-            }
+
+        Pais pais = control.buscarPais(paises);
+
+        if(pais == null){
+            System.out.println("Creacion cancelada. No se realizaron modificaciones.");
+            return;
         }
 
-        System.out.print("Definir ciudad de la sede:");
-        ciudad = sc.nextLine();
+        System.out.println("Pais seleccionado: "+pais.getNombre());
 
-        System.out.print("Definir altura a nivel del mar (usar punto en los decimales): ");
-        while(true){
-            String aux = sc.nextLine();
-            try{alturaNivelMar = Float.parseFloat(aux);
-                break;
-                }
-            catch (NumberFormatException e){
-                System.out.println("Error, vuelva a intentarlo.");
-            }
-        }
-
-        System.out.print("Definir clima: ");
-        clima = sc.nextLine();
-
-        System.out.print("Definir zona horaria: ");
-        zonaHoraria = sc.nextLine();
+        String ciudad = control.leerString("Definir ciudad de la sede:");
+        float alturaNivelMar = (float)control.validarDatoNumerico("Definir altura a nivel del mar (usar punto en los decimales): ", 'f');
+        String clima = control.leerString("Definir clima: ");
+        String zonaHoraria = control.leerString("Definir zona horaria: ");
 
         sedes.add(new Sede(ciudad, alturaNivelMar, clima, zonaHoraria, pais));
-
     }
+
 
 }
