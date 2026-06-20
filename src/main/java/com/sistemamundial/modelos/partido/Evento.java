@@ -23,10 +23,19 @@ public class Evento {
     public void setTipo(TipoEvento tipo) {
         this.tipo = tipo;
     }
+
     public float getMinuto() {
         return minuto;
     }
     public void setMinuto(float minuto) {
         this.minuto = minuto;
+    }
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
     }
 }

@@ -1,5 +1,7 @@
 package com.sistemamundial.modelos.personas;
 
+import java.util.Objects;
+
 public class Persona {
     private String nombre;
     private int fechaNac;
@@ -23,5 +25,17 @@ public class Persona {
 
     public void setFechaNac(int fechaNac) {
         this.fechaNac = fechaNac;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Persona persona = (Persona) o;
+        return fechaNac == persona.fechaNac && Objects.equals(nombre, persona.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, fechaNac);
     }
 }

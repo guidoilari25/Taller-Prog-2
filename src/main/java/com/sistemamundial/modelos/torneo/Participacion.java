@@ -1,5 +1,6 @@
 package com.sistemamundial.modelos.torneo;
 import com.sistemamundial.modelos.partido.*;
+import com.sistemamundial.modelos.personas.Jugador;
 
 public class Participacion {
     private boolean esLocal;
@@ -30,7 +31,7 @@ public class Participacion {
         this.seleccion = seleccion;
     }
 
-    public Partido gePartido() {
+    public Partido getPartido() {
         return partido;
     }
     public void setPartido(Partido partido) {
@@ -38,33 +39,27 @@ public class Participacion {
     }
 
 
-   public int cantidadGoles() {
-       int goles = 0;
-       for(Evento evento:this.partido.getEventos()){
-           if(evento.getTipo().equals(TipoEvento.GOL)){
-               goles++;
-           }
-       }
-       return goles;
+    public int cantidadGoles() {
+        return contarEventosPropios(TipoEvento.GOL);
     }
 
     public int cantidadTarjetasAmarillas() {
-        int amarillas = 0;
-        for(Evento evento:this.partido.getEventos()){
-            if(evento.getTipo().equals(TipoEvento.TARJETA_AMARILLA)){
-                amarillas++;
-            }
-        }
-        return amarillas;
+        return contarEventosPropios(TipoEvento.TARJETA_AMARILLA);
     }
 
     public int cantidadTarjetasRojas() {
-        int rojas = 0;
-        for(Evento evento:this.partido.getEventos()){
-            if(evento.getTipo().equals(TipoEvento.TARJETA_ROJA)){
-                rojas++;
+        return contarEventosPropios(TipoEvento.TARJETA_ROJA);
+    }
+    
+    private int contarEventosPropios(TipoEvento tipoBuscado) {
+        int contador = 0;
+        for (Evento e : this.partido.getEventos()) {
+            if (e.getTipo().equals(tipoBuscado)) {
+                if (this.seleccion.getPlantel().contains(e.getJugador())) {
+                    contador++;
+                }
             }
         }
-        return rojas;
+        return contador;
     }
 }

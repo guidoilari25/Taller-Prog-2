@@ -15,9 +15,7 @@ public class Fase {
     //constructores
 
     public Fase() {
-        this.fase = null;
-        this.grupos = new ArrayList<Grupo>();
-        this.partidos = new ArrayList<Partido>();
+        this(null);
     }
 
     public Fase(NombreFase fase){

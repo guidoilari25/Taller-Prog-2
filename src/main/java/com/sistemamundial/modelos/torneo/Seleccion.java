@@ -22,10 +22,6 @@ public class Seleccion {
     //constructores
     public Seleccion() {
         this("", "", "", false, 0, null, null);
-        this.plantel = new ArrayList<Jugador>();
-        this.directorTecnico = new ArrayList<DirectorTecnico>();
-        this.cuerpoTecnico = new ArrayList<CuerpoTecnico>();
-        this.participaciones = new ArrayList<Participacion>();
     }
 
     public Seleccion(String federacion, String camiseta_1ra, String camiseta_2da, boolean cabezaGrupo, int rankingFIFA,

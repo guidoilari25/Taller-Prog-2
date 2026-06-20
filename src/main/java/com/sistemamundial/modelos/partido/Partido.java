@@ -25,9 +25,6 @@ public class Partido {
     //constructores
     public Partido() {
         this(null, null, 0, 0, null, null);
-        this.eventos = new ArrayList<Evento>();
-        this.arbitrajes = new ArrayList<Arbitraje>();
-        this.participaciones = new ArrayList<Participacion>();
     }
     public Partido(Date fecha, Time horario, float duracion, float tiempoAdicional, Fase fase,
                    Estadio estadio) {
