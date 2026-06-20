@@ -4,13 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Control {
-    private Scanner sc;
+    private static final Scanner sc = new Scanner(System.in);
 
-    public Control() {
-        sc = new Scanner(System.in);
-    }
-
-    public Pais buscarPais(ArrayList<Pais> paises) {
+    public static Pais buscarPais(ArrayList<Pais> paises) {
         String nombrePais;
 
         while (true) {
@@ -30,7 +26,7 @@ public class Control {
         }
     }
 
-    public double validarDatoNumerico(String m, char tipo) {
+    public static double validarDatoNumerico(String m, char tipo) {
         System.out.print(m);
         while (true) {
             String aux = sc.nextLine();
@@ -48,7 +44,7 @@ public class Control {
         }
     }
 
-    public String leerString(String m){
+    public static String leerString(String m){
         System.out.print(m);
         return sc.nextLine();
     }

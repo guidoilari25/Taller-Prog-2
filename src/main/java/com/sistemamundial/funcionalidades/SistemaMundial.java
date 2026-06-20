@@ -11,11 +11,8 @@ public class SistemaMundial {
     private List<Pais> paises;
     private String nombrePais;
 
-    private Control control;
-
     public SistemaMundial(){
         paises = new ArrayList<>();
-        control = new Control();
     }
 
 
@@ -40,10 +37,10 @@ public class SistemaMundial {
         System.out.println("Bienvenido/a a la configuracion inicial.");
         System.out.println("Primera fase: Datos del mundial");
 
-        int anio = (int)control.validarDatoNumerico("Definir año de celebración: ", 'i');
-        String mascota = control.leerString("Definir nombre de mascota: ");
-        int fechaDesde = (int)control.validarDatoNumerico("Definir fecha de inicio: ", 'i');
-        int fechaHasta = (int)control.validarDatoNumerico("Definir fecha de finalización: ", 'i');
+        int anio = (int)Control.validarDatoNumerico("Definir año de celebración: ", 'i');
+        String mascota = Control.leerString("Definir nombre de mascota: ");
+        int fechaDesde = (int)Control.validarDatoNumerico("Definir fecha de inicio: ", 'i');
+        int fechaHasta = (int)Control.validarDatoNumerico("Definir fecha de finalización: ", 'i');
 
         mundial = new Mundial(anio, mascota, fechaDesde, fechaHasta);
         System.out.println("Sistema inicializado.");
@@ -52,7 +49,7 @@ public class SistemaMundial {
         System.out.println("Ingrese los datos para los 32 paises participantes.");
         for(int i = 0; i < 32; i++){
             System.out.println("--- Pais "+(i+1)+" ---");
-            nombrePais = control.leerString("Nombre: ");
+            nombrePais = Control.leerString("Nombre: ");
             paises.add(new Pais(nombrePais, "", null));
         }
         System.out.println("Paises cargados. Configuracion inicial completada.");
@@ -67,7 +64,7 @@ public class SistemaMundial {
             System.out.println("3. Gestion del torneo");
             System.out.println("4. Informes varios");
             System.out.println("5. Salir");
-            String opcion = control.leerString("Opcion: ");
+            String opcion = Control.leerString("Opcion: ");
 
             switch (opcion){
                 case "1":
@@ -99,7 +96,7 @@ public class SistemaMundial {
             System.out.println("1. Administrar sedes.");
             System.out.println("2. Administrar estadios.");
             System.out.println("3. Volver al menu principal.");
-            String opcion = control.leerString("Opcion: ");
+            String opcion = Control.leerString("Opcion: ");
 
             switch (opcion){
                 case "1", "2":
@@ -122,7 +119,7 @@ public class SistemaMundial {
             System.out.println("1. Registrar seleccion.");
             System.out.println("2. Gestionar seleccion.");
             System.out.println("3. Volver al menu principal");
-            String opcion = control.leerString("Opcion: ");
+            String opcion = Control.leerString("Opcion: ");
 
             switch (opcion){
                 case "1", "2":

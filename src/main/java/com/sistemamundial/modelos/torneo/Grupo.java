@@ -1,5 +1,5 @@
 package com.sistemamundial.modelos.torneo;
-
+import com.sistemamundial.utilidades.Resultados;
 import com.sistemamundial.modelos.partido.Partido;
 
 import java.util.ArrayList;
@@ -61,22 +61,14 @@ public class Grupo {
     public int obtenerPuntos(Seleccion s) {
         int puntosTotales = 0;
 
-        List<Participacion> equipos;
-        Participacion participacionRival;
-
-        for (Participacion miParticipacion : s.getParticipaciones()) {
-            equipos = miParticipacion.getPartido().getParticipaciones();
-
-            if (equipos.getFirst().getSeleccion().equals(s)) {
-                participacionRival = equipos.getLast();
-            } else {
-                participacionRival = equipos.getFirst();
-            }
-
-            if(miParticipacion.cantidadGoles() > participacionRival.cantidadGoles()){
-                puntosTotales += 3;
-            } else if(miParticipacion.cantidadGoles() == participacionRival.cantidadGoles()){
-                puntosTotales += 1;
+        for (Participacion participacion : s.getParticipaciones()) {
+            switch (Resultados.obtenerResultado(participacion)){
+                case 'v':
+                    puntosTotales += 3;
+                    break;
+                case 'e':
+                    puntosTotales++;
+                    break;
             }
         }
         return puntosTotales;
